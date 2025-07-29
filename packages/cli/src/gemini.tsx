@@ -2,7 +2,9 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// Gemini CLI のメインロジックを提供するモジュール
 
 import React from 'react';
 import { render } from 'ink';
@@ -41,6 +43,8 @@ import { validateAuthMethod } from './config/auth.js';
 import { setMaxSizedBoxDebugging } from './ui/components/shared/MaxSizedBox.js';
 import { validateNonInteractiveAuth } from './validateNonInterActiveAuth.js';
 import { appEvents, AppEvent } from './utils/events.js';
+
+// Node.jsが使用できるメモリ量を計算して必要なら再起動オプションを返す
 
 function getNodeMemoryArgs(config: Config): string[] {
   const totalMemoryMB = os.totalmem() / (1024 * 1024);
@@ -87,6 +91,8 @@ async function relaunchWithAdditionalArgs(additionalArgs: string[]) {
 }
 import { runAcpPeer } from './acp/acpPeer.js';
 
+// 未処理のPromise拒否を捕捉してユーザーに通知する
+
 export function setupUnhandledRejectionHandler() {
   let unhandledRejectionOccurred = false;
   process.on('unhandledRejection', (reason, _promise) => {
@@ -109,6 +115,7 @@ ${reason.stack}`
   });
 }
 
+// CLIアプリケーションのメイン処理を開始する
 export async function main() {
   setupUnhandledRejectionHandler();
   const workspaceRoot = process.cwd();
