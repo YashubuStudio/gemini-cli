@@ -2,7 +2,10 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// ユーザーの長期記憶ファイルに項目を追記するツール。
+// CLI からの `/remember` 的な指示に応じて GEMINI.md に情報を保存する。
 
 import { BaseTool, Icon, ToolResult } from './tools.js';
 import { FunctionDeclaration, Type } from '@google/genai';

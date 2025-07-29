@@ -2,7 +2,11 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// GEMINI.md を階層的に探索し、ユーザーのメモリ内容を結合する読み込みシステム。
+// MemoryTool と連携しており、グローバル設定やプロジェクト単位のファイルから
+// インポートを解析しながらコンテキストを生成する。
 
 import * as fs from 'fs/promises';
 import * as fsSync from 'fs';

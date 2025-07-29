@@ -2,7 +2,11 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// このファイルではエージェントの基盤となるシステムプロンプトを生成する。
+// 環境変数 `GEMINI_SYSTEM_MD` を使うと外部ファイルからプロンプトを上書きでき、
+// `GEMINI_WRITE_SYSTEM_MD` を設定するとデフォルトプロンプトを書き出せる。
 
 import path from 'node:path';
 import fs from 'node:fs';
