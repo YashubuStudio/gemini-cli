@@ -2,7 +2,9 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// MCP サーバーから取得したプロンプトを登録・参照する簡易レジストリ。
 
 import { DiscoveredMCPPrompt } from '../tools/mcp-client.js';
 
