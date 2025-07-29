@@ -2,7 +2,10 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// 認証方式に応じて Gemini API へのリクエストを生成するラッパー。
+// モデルの選択やプロキシ設定を行い、各種生成・埋め込み API を呼び出す。
 
 import {
   CountTokensResponse,

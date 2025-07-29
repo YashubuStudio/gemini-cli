@@ -2,7 +2,10 @@
  * @license
  * Copyright 2025 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
+
+// Gemini API と対話し、履歴管理やストリーム処理を行うチャットセッション。
+// エージェントが生成するメッセージを送り、応答を受け取って履歴に記録する。
 
 // DISCLAIMER: This is a copied version of https://github.com/googleapis/js-genai/blob/main/src/chats.ts with the intention of working around a key bug
 // where function responses are not treated as "valid" responses: https://b.corp.google.com/issues/420354090
