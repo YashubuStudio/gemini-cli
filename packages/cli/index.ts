@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// このファイルはCLIツールのエントリーポイントです
 
 /**
  * @license
@@ -9,9 +10,11 @@
 import './src/gemini.js';
 import { main } from './src/gemini.js';
 
+// main関数を呼び出してGemini CLIを実行する
+
 // --- Global Entry Point ---
 main().catch((error) => {
-  console.error('An unexpected critical error occurred:');
+  console.error('An unexpected critical error occurred:'); // 予期しない致命的なエラー
   if (error instanceof Error) {
     console.error(error.stack);
   } else {

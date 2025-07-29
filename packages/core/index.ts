@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+// コアモジュールの公開APIをまとめたエントリーファイル
+
 export * from './src/index.js';
+
+// デフォルトモデルの定義を再公開する
 export {
   DEFAULT_GEMINI_MODEL,
   DEFAULT_GEMINI_FLASH_MODEL,
